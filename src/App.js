@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react'
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Home from './routes/home'
+// import GoogleGlass from './routes/googleglass'
+// import SmartCampus from './routes/smartcampus'
+// import Ubrand from './routes/ubrand'
+// import Insights from './routes/insights'
+// import Time from './routes/meredith_work'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      
+    }
+  }
+
+
+  render(){
+    return (
+      <Router>
+        <Switch>
+          
+          {/* <Route exact path="/insights" component={Insights} /> */}
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </Router>
+    )
+  }
 }
-
-export default App;
