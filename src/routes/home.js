@@ -4,7 +4,12 @@ import '../index.css'
 import '../App.css'
 // import { X } from 'react-feather';
 var shibani = require('../assets/profile_img.jpg');
-var shibani_resume = require('../assets/shibani_resume.pdf');
+var shibani_resume = require('../assets/shibani_resume2.pdf');
+var healthcheck = require('../assets/healthcheck.png');
+var seat = require('../assets/seat.jpeg');
+var escooter = require('../assets/escooter.png');
+var savesoul = require('../assets/savesoul1.png');
+var insurance = require('../assets/insurance.jpeg');
 
 class Home extends Component {
 
@@ -27,9 +32,21 @@ class Home extends Component {
     // console.log(this.state.myMap)
 }
 
-  // navigateInsights(){
-  //   this.props.history.push('/insights')
-  // }
+navigateVMware(){
+    this.props.history.push('/vmware')
+  }
+navigateEScooter(){
+    this.props.history.push('/escooter')
+  }
+navigateInsurance(){
+    this.props.history.push('/insurance')
+  }
+navigateSaveTheSoul(){
+    this.props.history.push('/savethesoul')
+  }
+  navigateSpaceAllocation(){
+    this.props.history.push('/spaceallocation')
+  }
 
   render(){
 
@@ -38,10 +55,11 @@ class Home extends Component {
     <div className="App">
        
       <header className="App-header">
-      <img src={shibani} style={{width:'175px',height:'175px',objectFit:'cover',padding:'16px',borderRadius: '60% 40% 40% 20% / 70% 50% 30% 25%'}}/>
+      <img src={shibani} style={{width:'175px',height:'175px',objectFit:'cover',padding:'16px',borderRadius: '60% 40% 40% 20% / 70% 50% 30% 25%'}} alt=""/>
+      
         <h1>Shibani Pandit</h1>
         {/* <div><p>A<mark> multidisiplinary designer </mark>. Cares about details in his work that includes from<mark> interaction</mark> +<mark> visual designs</mark>.</p></div> */}
-        <div><p><b>UX, product and more!</b><br/> <i>Evaluating digital experiences for users to have less friction and become more productive.</i>.<br/> 
+        <div><p><b>Product designer</b><br/> <b>Currently working at VMware</b><br/> 
         {/* Believes - The purpose of design surfaces from <mark>human needs.</mark> */}
         {/* <br/> */}
         {/* Jack of <del>all</del> few trades. */}
@@ -51,18 +69,55 @@ class Home extends Component {
       <br/>
       
       {/* <br/> */}
-      <h3>Work</h3>
+      <h4 style={{display: 'flex',justifyContent:'center'}}><b>Case studies</b></h4>
       <div style={{display:'flex',flexWrap:'wrap', justifyContent:'center'}}>
 
-        <div className='project_card' >
-          {/* <img src={ms_cover} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/> */}
+        <div className='project_card' onClick={this.navigateVMware.bind(this)}>
+          <img src={healthcheck} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
           <div style={{padding:'16px',margin:'10px'}}>
-            <h3>Project 1</h3>
+            <h3>Environment Health check report</h3>
             {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
-            <p>From brainstorming to visuals, I created end to end dashboards that answer complex business questions and has upto 60K MAUs.</p>
+            <p>Helping Account Managers deliver Health Check Reports on customer environments and architecture.</p>
             <p style={{color:'#004dff'}}>Quick view →</p>
           </div>
         </div>
+        <div className='project_card' onClick={this.navigateEScooter.bind(this)}>
+          <img src={escooter} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
+          <div style={{padding:'16px',margin:'10px'}}>
+            <h3>E-Scooter Digital Dashboard</h3>
+            {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
+            <p>A smart, Safe, and driver-friendly E-scooter Digital Dashboard.</p>
+            <p style={{color:'#004dff'}}>Quick view →</p>
+          </div>
+        </div>
+        <div className='project_card' onClick={this.navigateInsurance.bind(this)}>
+          <img src={insurance} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
+          <div style={{padding:'16px',margin:'10px'}}>
+            <h3>Insurance lifecycle management</h3>
+            {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
+            <p>A platform for complete end-to-end support and servicing of an Insurance policy.</p>
+            <p style={{color:'#004dff'}}>Quick view →</p>
+          </div>
+        </div>
+        <div className='project_card' onClick={this.navigateSaveTheSoul.bind(this)}>
+          <img src={savesoul} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
+          <div style={{padding:'16px',margin:'10px'}}>
+            <h3>Save the Soul</h3>
+            {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
+            <p>A disaster management platform</p>
+            <p style={{color:'#004dff'}}>Quick view →</p>
+          </div>
+        </div>
+        <div className='project_card' onClick={this.navigateSpaceAllocation.bind(this)}>
+          <img src={seat} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
+          <div style={{padding:'16px',margin:'10px'}}>
+            <h3>Capacity, planning, and Infrastructure</h3>
+            {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
+            <p>Helping CPI admins manage space allocation.</p>
+            <p style={{color:'#004dff'}}>Quick view →</p>
+          </div>
+        </div>
+
 {/* 
         <div className='project_card' onClick={this.navigateSmartCampus.bind(this)}>
           <img src={campus} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
@@ -106,36 +161,12 @@ class Home extends Component {
       
       <br/><br/><br/>
       <h3>
-      <center><span><a href={shibani_resume} target="_blank">Download my resume</a></span></center>
+      <center><span><a href={shibani_resume} target="_blank" rel="noreferrer">Download my resume</a></span></center>
       </h3>
       {/* <h2>Resume</h2> */}
       <br/><br/>
       
-      <div style={{display:'flex', justifyContent:'center',textAlign:'left',padding:'16px'}}>
-        
-        <div style={{width:'600px'}}>
-        <h3>Experience</h3>
-          {/* <h4>Experience</h4> */}
-          <p><b>VMware</b><br/>
-          <span>Dec 2019 - present</span><br/>
-          • Designed CIOs Observability Dashboard.<br/>
-          • Helped Technical Associate Managers deliver Insight Reports.<br/>
-          • Seamless vRealise Cloud Universal Onboarding.<br/>
-          • One click activation of Integrations in vROps.<br/>
-          
-          </p>
-          
-          <p><b>Infosys Limited</b><br/>
-          <span>Jun 2016 - Oct 2019</span><br/>
-          • Designed a platform for global Insurance and Annuity industry
-used by the back-office users.<br/>
-          • Designed the customer portal for an Agricultural equipment
-manufacturing company.<br/>
-          
-          </p>
-          
-        </div>
-      </div>
+      
      
       <br/><br/><br/>
 {/*       
@@ -160,21 +191,7 @@ manufacturing company.<br/>
 
      
 
-      <div style={{display:'flex', justifyContent:'center',textAlign:'left',padding:'16px'}}>
-        <div style={{width:'600px'}}>
-          <h3>Details</h3>
-        
-          
-          <p><b>Email</b><br/>
-          newtonpavan33@gmail.com.<br/>
-          </p>
-          
-          <p><b>Mobile</b><br/>
-          7799813519<br/>
-          </p>
-        </div>
-      </div>
-
+      
       <hr className="hr-text" data-content="Thank you!" />
       <br/><br/><br/>
     </div>
