@@ -25,10 +25,11 @@ class SpaceAllocation extends Component {
     return(
   
    
-        <div style={{height:'100vh',width:'100vw'}}>
-            <object data={spaceallocation} style={{type:'application/pdf',width:'100%',height:'100%'}} >
-                {/* alt : <a href={shibani_resume} >test.pdf</a> */}
-            </object>
+        <div>
+            <iframe src={spaceallocation} style={{width: '100%', height: '100vh'}}/>
+            {/* <object data={spaceallocation} style={{type:'application/pdf',width:'100%',height:'100%'}} >
+                alt : <a href={shibani_resume} >test.pdf</a>
+            </object> */}
         </div>
 
 

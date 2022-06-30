@@ -25,10 +25,11 @@ class Insurance extends Component {
     return(
   
    
-        <div style={{height:'100vh',width:'100vw'}}>
-            <object data={insurance} style={{type:'application/pdf',width:'100%',height:'100%'}} >
-                {/* alt : <a href={shibani_resume} >test.pdf</a> */}
-            </object>
+        <div>
+            <iframe src={insurance} style={{width: '100%', height: '100vh'}}/>
+            {/* <object data={insurance} style={{type:'application/pdf',width:'100%',height:'100%'}} >
+                alt : <a href={shibani_resume} >test.pdf</a>
+            </object> */}
         </div>
 
 
