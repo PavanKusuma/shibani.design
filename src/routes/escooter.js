@@ -27,7 +27,8 @@ class EScooter extends Component {
    
         <div>
           
-          <iframe src={e_scooter} style={{width: '100%', height: '100vh'}}/>
+          <iframe src={'e_scooter'} style={{width: '100%', height: '100vh'}}/>
+          {/* <iframe src={e_scooter} style={{width: '100%', height: '100vh'}}/> */}
             {/* <object data={e_scooter} style={{type:'application/pdf',width:'100%',height:'100%'}} >
                 alt : <a href={shibani_resume} >test.pdf</a>
             </object> */}

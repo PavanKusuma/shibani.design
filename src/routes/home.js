@@ -10,6 +10,9 @@ var seat = require('../assets/seat.jpeg');
 var escooter = require('../assets/escooter.png');
 var savesoul = require('../assets/savesoul1.png');
 var insurance = require('../assets/insurance.jpeg');
+var reportinginsights = require('../assets/reportinginsights.png');
+var award1 = require('../assets/award1.png');
+var award2 = require('../assets/award2.png');
 
 class Home extends Component {
 
@@ -47,6 +50,9 @@ navigateSaveTheSoul(){
   navigateSpaceAllocation(){
     this.props.history.push('/spaceallocation')
   }
+  navigateReportingInsights(){
+    this.props.history.push('/reportinginsights')
+  }
 
   render(){
 
@@ -55,11 +61,11 @@ navigateSaveTheSoul(){
     <div className="App">
        
       <header className="App-header">
-      <img src={shibani} style={{width:'175px',height:'175px',objectFit:'cover',padding:'16px',borderRadius: '60% 40% 40% 20% / 70% 50% 30% 25%'}} alt=""/>
+      <img src={shibani} style={{width:'205px',height:'205px',objectFit:'cover',padding:'16px',borderRadius: '60% 40% 40% 20% / 70% 50% 30% 25%'}} alt=""/>
       
         <h1>Shibani Pandit</h1>
         {/* <div><p>A<mark> multidisiplinary designer </mark>. Cares about details in his work that includes from<mark> interaction</mark> +<mark> visual designs</mark>.</p></div> */}
-        <div><p><b>Product designer</b><br/> <b>Currently working at VMware</b><br/> 
+        <div><p style={{color:'#333'}}>Product designer 3<br/> VMware<br/> 
         {/* Believes - The purpose of design surfaces from <mark>human needs.</mark> */}
         {/* <br/> */}
         {/* Jack of <del>all</del> few trades. */}
@@ -69,34 +75,44 @@ navigateSaveTheSoul(){
       <br/>
       
       {/* <br/> */}
-      <h4 style={{display: 'flex',justifyContent:'center'}}><b>Case studies</b></h4>
+      <h4 style={{display: 'flex',justifyContent:'center', fontWeight:'600', fontVariant:'all-small-caps'}}>Case studies</h4>
       <div style={{display:'flex',flexWrap:'wrap', justifyContent:'center'}}>
+
+        <div className='project_card' onClick={this.navigateReportingInsights.bind(this)}>
+          <img src={reportinginsights} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
+          <div style={{padding:'16px',margin:'10px'}}>
+            <h3 style={{color:'#004dff !important'}}>Reporting Insights →</h3>
+            {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
+            <p>Empowering VMware Support Managers to deliver insightful reports using Skyline product to ensure reliability and stability in customers environment.</p>
+            {/* <p style={{color:'#004dff'}}>Quick view →</p> */}
+          </div>
+        </div>
 
         <div className='project_card' onClick={this.navigateVMware.bind(this)}>
           <img src={healthcheck} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
           <div style={{padding:'16px',margin:'10px'}}>
-            <h3>Environment Health check report</h3>
+            <h3>Environment Health check report →</h3>
             {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
             <p>Helping Account Managers deliver Health Check Reports on customer environments and architecture.</p>
-            <p style={{color:'#004dff'}}>Quick view →</p>
+            {/* <p style={{color:'#004dff'}}>Quick view →</p> */}
           </div>
         </div>
         <div className='project_card' onClick={this.navigateEScooter.bind(this)}>
           <img src={escooter} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
           <div style={{padding:'16px',margin:'10px'}}>
-            <h3>E-Scooter Digital Dashboard</h3>
+            <h3>E-Scooter Digital Dashboard →</h3>
             {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
             <p>A smart, Safe, and driver-friendly E-scooter Digital Dashboard.</p>
-            <p style={{color:'#004dff'}}>Quick view →</p>
+            {/* <p style={{color:'#004dff'}}>Quick view →</p> */}
           </div>
         </div>
         <div className='project_card' onClick={this.navigateInsurance.bind(this)}>
           <img src={insurance} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
           <div style={{padding:'16px',margin:'10px'}}>
-            <h3>Insurance lifecycle management</h3>
+            <h3>Insurance lifecycle management →</h3>
             {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
             <p>A platform for complete end-to-end support and servicing of an Insurance policy.</p>
-            <p style={{color:'#004dff'}}>Quick view →</p>
+            {/* <p style={{color:'#004dff'}}>Quick view →</p> */}
           </div>
         </div>
         <div className='project_card' onClick={this.navigateSaveTheSoul.bind(this)}>
@@ -104,19 +120,18 @@ navigateSaveTheSoul(){
           <div style={{padding:'16px',margin:'10px'}}>
             <h3>Save the Soul</h3>
             {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
-            <p>A disaster management platform</p>
-            <p style={{color:'#004dff'}}>Quick view →</p>
+            <p>A disaster management platform →</p>
+            {/* <p style={{color:'#004dff'}}>Quick view →</p> */}
           </div>
         </div>
-        <div className='project_card' onClick={this.navigateSpaceAllocation.bind(this)}>
+        {/* <div className='project_card' onClick={this.navigateSpaceAllocation.bind(this)}>
           <img src={seat} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
           <div style={{padding:'16px',margin:'10px'}}>
             <h3>Capacity, planning, and Infrastructure</h3>
-            {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
             <p>Helping CPI admins manage space allocation.</p>
             <p style={{color:'#004dff'}}>Quick view →</p>
           </div>
-        </div>
+        </div> */}
 
 {/* 
         <div className='project_card' onClick={this.navigateSmartCampus.bind(this)}>
@@ -157,11 +172,32 @@ navigateSaveTheSoul(){
          */}
 
       </div>
+      <hr className="hr-text" data-content="Thank you!" />
+      
+      <h4 style={{display: 'flex',justifyContent:'center', fontWeight:'600', marginTop:'100px', fontVariant:'all-small-caps'}}>Awards</h4>
+      <div style={{display:'flex',flexWrap:'wrap', justifyContent:'center'}}>
+
+        <div className='award_card'>
+          <img src={award1} style={{width:'100%',height:'100%',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
+          <div style={{padding:'16px',margin:'10px'}}>
+            <h4>Achieve our best</h4>
+          </div>
+        </div>
+
+        <div className='award_card'>
+          <img src={award2} style={{width:'100%',height:'100%',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
+          <div style={{padding:'16px',margin:'10px'}}>
+          <h4>Elevate our best</h4>
+            
+          </div>
+        </div>
+        
+      </div>
       
       
       <br/><br/><br/>
       <h3>
-      <center><span><a href={shibani_resume} target="_blank" rel="noreferrer">Download my resume</a></span></center>
+      <center><span><a href={shibani_resume} target="_blank" rel="noreferrer">Download resume</a></span></center>
       </h3>
       {/* <h2>Resume</h2> */}
       <br/><br/>

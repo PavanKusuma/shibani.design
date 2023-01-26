@@ -6,6 +6,7 @@ import EScooter from './routes/escooter'
 import Insurance from './routes/insurance'
 import SaveTheSoul from './routes/savethesoul'
 import SpaceAllocation from './routes/spaceallocation'
+import ReportingInsights from './routes/reportinginsights'
 // import GoogleGlass from './routes/googleglass'
 // import SmartCampus from './routes/smartcampus'
 // import Ubrand from './routes/ubrand'
@@ -33,6 +34,7 @@ export default class App extends Component {
           <Route exact path="/insurance" component={Insurance} />
           <Route exact path="/savethesoul" component={SaveTheSoul} />
           <Route exact path="/spaceallocation" component={SpaceAllocation} />
+          <Route exact path="/reportinginsights" component={ReportingInsights} />
         </Switch>
       </Router>
     )
