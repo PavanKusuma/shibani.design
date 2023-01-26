@@ -75,12 +75,16 @@ navigateSaveTheSoul(){
       <br/>
       
       {/* <br/> */}
-      <h4 style={{display: 'flex',justifyContent:'center', fontWeight:'600', fontVariant:'all-small-caps'}}>Case studies</h4>
+      <div style={{display:'flex',justifyContent:'center', paddingBottom:'10px'}}>
+
+      <h4 style={{display: 'flex',justifyContent:'center', fontWeight:'600', fontVariant:'all-small-caps', borderBottom:'3px solid #000'}}>Case studies</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <h4 style={{display: 'flex',justifyContent:'center', fontWeight:'600', fontVariant:'all-small-caps', color:'#999 !important'}}><a href="#awards" style={{textDecoration:'none',}}>Awards</a></h4>
+      </div>
       <div style={{display:'flex',flexWrap:'wrap', justifyContent:'center'}}>
 
         <div className='project_card' onClick={this.navigateReportingInsights.bind(this)}>
           <img src={reportinginsights} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
-          <div style={{padding:'16px',margin:'10px'}}>
+          <div style={{padding:'0px 16px',margin:'10px'}}>
             <h3 style={{color:'#004dff !important'}}>Reporting Insights →</h3>
             {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
             <p>Empowering VMware Support Managers to deliver insightful reports using Skyline product to ensure reliability and stability in customers environment.</p>
@@ -90,7 +94,7 @@ navigateSaveTheSoul(){
 
         <div className='project_card' onClick={this.navigateVMware.bind(this)}>
           <img src={healthcheck} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
-          <div style={{padding:'16px',margin:'10px'}}>
+          <div style={{padding:'0px 16px',margin:'10px'}}>
             <h3>Environment Health check report →</h3>
             {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
             <p>Helping Account Managers deliver Health Check Reports on customer environments and architecture.</p>
@@ -99,31 +103,32 @@ navigateSaveTheSoul(){
         </div>
         <div className='project_card' onClick={this.navigateEScooter.bind(this)}>
           <img src={escooter} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
-          <div style={{padding:'16px',margin:'10px'}}>
+          <div style={{padding:'0px 16px',margin:'10px'}}>
             <h3>E-Scooter Digital Dashboard →</h3>
             {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
             <p>A smart, Safe, and driver-friendly E-scooter Digital Dashboard.</p>
             {/* <p style={{color:'#004dff'}}>Quick view →</p> */}
           </div>
         </div>
+        <div className='project_card' onClick={this.navigateSaveTheSoul.bind(this)}>
+          <img src={savesoul} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
+          <div style={{padding:'0px 16px',margin:'10px'}}>
+            <h3>Save the Soul →</h3>
+            {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
+            <p>A disaster management platform</p>
+            {/* <p style={{color:'#004dff'}}>Quick view →</p> */}
+          </div>
+        </div>
         <div className='project_card' onClick={this.navigateInsurance.bind(this)}>
           <img src={insurance} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
-          <div style={{padding:'16px',margin:'10px'}}>
+          <div style={{padding:'0px 16px',margin:'10px'}}>
             <h3>Insurance lifecycle management →</h3>
             {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
             <p>A platform for complete end-to-end support and servicing of an Insurance policy.</p>
             {/* <p style={{color:'#004dff'}}>Quick view →</p> */}
           </div>
         </div>
-        <div className='project_card' onClick={this.navigateSaveTheSoul.bind(this)}>
-          <img src={savesoul} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
-          <div style={{padding:'16px',margin:'10px'}}>
-            <h3>Save the Soul</h3>
-            {/* <p>From concepts to wireframing and visuals, it was challenging to provide answers to business questions using clean dashboards.</p> */}
-            <p>A disaster management platform →</p>
-            {/* <p style={{color:'#004dff'}}>Quick view →</p> */}
-          </div>
-        </div>
+        
         {/* <div className='project_card' onClick={this.navigateSpaceAllocation.bind(this)}>
           <img src={seat} style={{width:'100%',height:'200px',objectFit:'cover', borderRadius:'12px 12px 0px 0px'}}/>
           <div style={{padding:'16px',margin:'10px'}}>
@@ -174,7 +179,7 @@ navigateSaveTheSoul(){
       </div>
       <hr className="hr-text" data-content="Thank you!" />
       
-      <h4 style={{display: 'flex',justifyContent:'center', fontWeight:'600', marginTop:'100px', fontVariant:'all-small-caps'}}>Awards</h4>
+      <h4 id="awards" style={{display: 'flex',justifyContent:'center', fontWeight:'600', marginTop:'100px', fontVariant:'all-small-caps'}}>Awards</h4>
       <div style={{display:'flex',flexWrap:'wrap', justifyContent:'center'}}>
 
         <div className='award_card'>
@@ -197,7 +202,7 @@ navigateSaveTheSoul(){
       
       <br/><br/><br/>
       <h3>
-      <center><span><a href={shibani_resume} target="_blank" rel="noreferrer">Download resume</a></span></center>
+      <center><span><a href={shibani_resume} target="_blank" rel="noreferrer">View resume</a></span></center>
       </h3>
       {/* <h2>Resume</h2> */}
       <br/><br/>
