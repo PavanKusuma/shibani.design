@@ -5,12 +5,12 @@ import '../App.css'
 // import { X } from 'react-feather';
 var shibani = require('../assets/profile_img.jpg');
 var shibani_resume = require('../assets/shibani_resume2.pdf');
-var healthcheck = require('../assets/healthcheck.png');
+var healthcheck = require('../assets/tam.jpeg');
 var seat = require('../assets/seat.jpeg');
 var escooter = require('../assets/escooter.png');
 var savesoul = require('../assets/savesoul1.png');
 var insurance = require('../assets/insurance.jpeg');
-var reportinginsights = require('../assets/reportinginsights.png');
+var reportinginsights = require('../assets/reporting1.jpeg');
 var award1 = require('../assets/award1.png');
 var award2 = require('../assets/award2.png');
 
